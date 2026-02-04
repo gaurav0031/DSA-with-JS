@@ -45,3 +45,42 @@ let length = fruits.length;
 for (let i=1; i<fruits.length; i++) {
     console.log(fruits[i]);
 }
+
+// While Loop
+
+let i = 0;
+
+while (i < 5) {
+    console.log("hello");
+    i++;
+}
+
+// Do-While Loop
+
+let j = 0;
+
+do {
+    console.log("hello");
+    j++;
+} while (j < 5);
+
+// Loop through an array using while loop
+
+let colors = ["Red", "Green", "Blue", "Yellow"];
+let index = 0;
+
+while (index < colors.length) {
+    console.log(colors[index]);
+    index++;
+}
+
+// Loop through an array using do-while loop
+
+let animals = ["Dog", "Cat", "Elephant", "Giraffe"];
+let idx = 0;
+
+do {
+    console.log(animals[idx]);
+    idx++;
+} while (idx < animals.length);
+
