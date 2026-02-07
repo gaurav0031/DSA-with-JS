@@ -14,7 +14,7 @@ for (let i = 0; i < n; i++){
 // **
 // ***
 // ****
-//Star Pattern n = 5
+//Star Pattern m = 5
 let m = 5;
 for (let i = 0; i < m; i++){
     let row = "";
@@ -24,7 +24,7 @@ for (let i = 0; i < m; i++){
     console.log(row);
 }
 
-//Star Pattern n = 4
+//Star Pattern a = 4
 let a = 4;
 for (let i = 0; i < a; i++){
     let row = "";
@@ -48,5 +48,52 @@ for (let i = 0; i < b; i++){
     for (let j = 0; j < i+1; j++){
         row = row + (j+1);
     }
+    console.log(row);
+} 
+
+//star pattern n = 5
+//12345
+//1234
+//123
+//12
+//1
+
+let c = 5;
+for (let i = 0; i < c; i++){
+    let row = "";
+    for (let j = 0; j < c-i; j++){
+        row = row + (j+1);
+    }
+    console.log(row);
+}
+
+// star pattern b = 5
+
+let d = 5;
+for (let i = 0; i < d; i++){
+    let row = "";
+    for (j = 0; j< d-i; j++){
+        row = row + "*"
+    }
+    console.log(row);
+}
+
+//star pattern x = 5
+//    *
+//   **
+//  ***
+// ****
+//*****
+
+let x = 5;
+for (let i = 0; i < x; i++){
+    let row = ""
+    for (let j = 0; j < x - (i + 1); j++) {
+        row = row + " ";
+    }
+        for (let k = 0; k < i+1; k++){
+            row = row + "*"
+        }
+   
     console.log(row);
 }
