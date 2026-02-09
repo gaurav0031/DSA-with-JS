@@ -118,3 +118,22 @@ for (let i = 0; i < y; i++){
     console.log(row);
 }
 
+//star pattern z = 5
+//10101
+//01010
+//10101
+//01010
+//10101
+
+let z = 5;
+for (let i = 0; i < z; i++){
+    let row = "";
+    for (let j = 0; j < z; j++){
+        if ((i + j) % 2 == 0){
+            row = row + "1";
+        } else {
+            row = row + "0";
+        }
+    }
+    console.log(row);
+}
