@@ -3,7 +3,10 @@
 let n = 12321;
 let res = 0;
 
-function isPalindrome(){
+function isAPalindrome(){
+    if (n<0){
+        return false;
+    }
     while(n>0){
         let rem = n%10; // 12321%10 = 1 , 1232%10 = 2 , 123%10 = 3 , 12%10 = 2 , 1%10 = 1
         res = res*10 + rem; //0*10 + 1 = 1 , 1*10 + 2 = 12 , 12*10 + 3 = 123 , 123*10 + 2 = 1232 , 1232*10 + 1 = 12321
@@ -11,10 +14,33 @@ function isPalindrome(){
     }
 
 }
-isPalindrome();
+isAPalindrome();
 if(res == 12321){
     console.log("Palindrome");
 }
 else{
     console.log("Not a Palindrome");
 }
+
+
+//Leetcode solution
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    if (x < 0) {
+        return false;
+    }
+
+    let xCopy = x;
+    let rev = 0;
+
+    while (x > 0) {
+        let rem = x % 10;
+        rev = rev * 10 + rem;
+        x = Math.floor(x / 10);
+    }
+
+    return rev === xCopy;
+};
