@@ -25,7 +25,7 @@ console.log(res);
 
 // Find the second largest number from an array but if array have less then two elements.
 
-function secondLargest(arr1) {
+function secondLargestWithValidation(arr1) {
     if (arr1.length < 2) {
         return "array should have at least 2 elemnets"
     }
@@ -48,14 +48,14 @@ for (let i = 0; i < arr1.length; i++) {
  
 let arr1 = [1, 2, 3, 7, 12, 4, 5, 55]
 
-let res1 = secondLargest(arr1);
+let res1 = secondLargestWithValidation(arr1);
 console.log(res1);
 
 
 
 // Find the second largest number from an array but if array have less then two elements.
 
-function secondLargest(arr2) {
+function secondLargestExcludeDuplicates(arr2) {
     if (arr2.length < 2) {
         return "array should have at least 2 elemnets"
     }
@@ -78,5 +78,5 @@ for (let i = 0; i < arr2.length; i++) {
  
 let arr2 = [1, 2, 3, 7, 12, 4, 5, 55,44, 43, 55]
 
-let res2 = secondLargest(arr2);
+let res2 = secondLargestExcludeDuplicates(arr2);
 console.log(res2);
