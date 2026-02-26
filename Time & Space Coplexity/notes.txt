@@ -1,0 +1,188 @@
+========================================
+TIME AND SPACE COMPLEXITY – DSA NOTES
+========================================
+
+1️⃣ WHY TIME & SPACE COMPLEXITY?
+
+Time Complexity → How fast an algorithm runs.
+Space Complexity → How much memory an algorithm uses.
+
+We measure growth, NOT exact execution time.
+It tells how algorithm behaves when input size (n) increases.
+
+----------------------------------------
+2️⃣ WHAT IS BIG-O NOTATION?
+----------------------------------------
+
+Big-O describes WORST CASE time complexity.
+
+It represents how the runtime grows relative to input size.
+
+Common Complexities:
+
+O(1)       → Constant
+O(log n)   → Logarithmic
+O(n)       → Linear
+O(n log n) → Linearithmic
+O(n²)      → Quadratic
+O(2^n)     → Exponential
+O(n!)      → Factorial
+
+----------------------------------------
+3️⃣ TIME COMPLEXITY EXAMPLES
+----------------------------------------
+
+1. O(1) – Constant Time
+
+Example:
+Accessing array element.
+
+arr[5]
+
+Doesn't depend on input size.
+
+
+2. O(n) – Linear Time
+
+Example:
+Single loop.
+
+for (let i = 0; i < n; i++) {
+   console.log(i);
+}
+
+Runs n times.
+
+
+3. O(n²) – Quadratic Time
+
+Example:
+Nested loops.
+
+for (let i = 0; i < n; i++) {
+   for (let j = 0; j < n; j++) {
+       console.log(i, j);
+   }
+}
+
+Runs n * n = n² times.
+
+
+4. O(log n) – Logarithmic
+
+Example:
+Binary Search
+
+Each step reduces problem by half.
+
+----------------------------------------
+4️⃣ HOW TO CALCULATE TIME COMPLEXITY
+----------------------------------------
+
+Rule 1: Ignore constants
+O(2n) → O(n)
+
+Rule 2: Drop lower order terms
+O(n² + n) → O(n²)
+
+Rule 3: Consider worst case
+
+----------------------------------------
+5️⃣ SPACE COMPLEXITY
+----------------------------------------
+
+Memory used by algorithm.
+
+Includes:
+- Variables
+- Data structures
+- Function call stack
+
+Example:
+
+function sum(n) {
+   let total = 0;
+   for (let i = 1; i <= n; i++) {
+      total += i;
+   }
+   return total;
+}
+
+Space Complexity → O(1)
+Only fixed variables used.
+
+
+Example 2:
+
+function createArray(n) {
+   let arr = [];
+   for (let i = 0; i < n; i++) {
+      arr.push(i);
+   }
+   return arr;
+}
+
+Space Complexity → O(n)
+Array grows with input.
+
+----------------------------------------
+6️⃣ AUXILIARY SPACE
+----------------------------------------
+
+Extra space used (excluding input).
+
+Important for interviews.
+
+----------------------------------------
+7️⃣ RECURSION & SPACE
+----------------------------------------
+
+Recursive calls use stack memory.
+
+Example:
+
+function factorial(n) {
+   if (n == 0) return 1;
+   return n * factorial(n-1);
+}
+
+Time Complexity → O(n)
+Space Complexity → O(n) (call stack)
+
+----------------------------------------
+8️⃣ COMMON INTERVIEW TRAPS
+----------------------------------------
+
+✔ Nested loop doesn't always mean O(n²)
+   (If inner loop runs n/2 times → still O(n²))
+
+✔ Sequential loops add:
+   O(n) + O(n) = O(n)
+
+✔ Different inputs multiply:
+   O(n * m)
+
+----------------------------------------
+9️⃣ GROWTH RATE ORDER (FASTEST → SLOWEST)
+----------------------------------------
+
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+O(2^n)
+O(n!)
+
+----------------------------------------
+10️⃣ QUICK SUMMARY
+----------------------------------------
+
+Best Complexity → O(1)
+Acceptable → O(n log n)
+Avoid → O(n²) for large inputs
+Very bad → O(2^n), O(n!)
+
+========================================
+END OF NOTES
+========================================
